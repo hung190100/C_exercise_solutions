@@ -14,7 +14,6 @@ int main()
 
     int max = arr[0][0];
     int min = arr[0][0];
-    int temp; // bien trung gian
 
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 4; j++) {
