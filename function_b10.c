@@ -1,33 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
-void fibonacci(long long int n) {
-    long long int a1 = 1, a2 = 1;
-    if (n < 2) {
-        printf("ERROR");
-    } else if (n == 2) {
-        printf("%ld\n%ld%n", a1, a2);
-    } else {
-        long long int a = a2;
-        printf("%ld\n", a1);
-        while (a < n) {
-            printf("%ld\n", a);
-            a = a1 + a2;
-            a1 = a2;
-            a2 = a;
-        }
+
+// Dùng vòng lặp
+int Fibonacci(int n) {
+    int a1 = 1, a2 = 2;
+
+    if(n == 1 || n == 2) {
+        return 1;
     }
+
+    int a;
+    for (int i = 3; i < n; i++) {
+        a = a1 + a2;
+        a1 = a2;
+        a2 = a;
+    }
+
+    return a;
 }
 
+/*
+// Dùng đệ quy
+int Fibonacci(int n) {
+    if (n == 1 || n == 2) {
+        return 1;
+    }
+
+    return Fibonacci(n-1) + Fibonacci(n-2);
+}
+*/
 int main()
 {
-    long long int n;
+    int n;
 
     printf("Nhap n: ");
-    scanf("%ld", &n);
+    scanf("%d", &n);
 
-    fibonacci(n);
+    printf("So fibonacci thu %d la %d", n, Fibonacci(n));
 
     return 0;
 }
