@@ -13,7 +13,6 @@ int find_max (int arr[], int n) {
     return max;
 }
 
-
 int main()
 {
     int n;
