@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 // Dùng vòng lặp
 int Fibonacci(int n) {
     int a1 = 1, a2 = 2;
